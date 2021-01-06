@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Layout, Menu } from 'antd';
 import {
-	MessageOutlined,
+	ProfileOutlined,
 	CreditCardOutlined,
 	DatabaseOutlined,
 	CalendarOutlined,
@@ -23,8 +23,8 @@ const Sidebar = (props) => {
 				}}
 			>
 				<Menu theme="dark" mode="inline" style={{ backgroundColor: '#525FE5' }}>
-					<Menu.Item key="1" icon={<MessageOutlined />}>
-						Messages
+					<Menu.Item key="1" icon={<ProfileOutlined />}>
+						Claims
 					</Menu.Item>
 					<Menu.Item key="2" icon={<CreditCardOutlined />}>
 						Payments

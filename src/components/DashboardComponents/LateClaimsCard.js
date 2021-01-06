@@ -6,7 +6,7 @@ import { Bar } from 'react-chartjs-2';
 const { Title, Link } = Typography;
 
 const data = {
-	labels: ['10 Days', '15 Days', '30 Days', '60 Days'],
+	labels: ['0 to 9 Days', '10 to 29 Days', '30 to 59 Days', '60+ Days'],
 	datasets: [
 		{
 			label: 'Number of Claims',
@@ -19,8 +19,8 @@ const data = {
 const LateClaimsCard = (props) => {
 	return (
 		<Fragment>
-			<Card title="Late Claims" style={{ borderRadius: 5 }}>
-				<Row>
+			<Card title="Unpaid Claim by Late Days" style={{ borderRadius: 5 }}>
+				<Row style={{ marginBottom: 20 }}>
 					<Col span={24}>
 						<Bar
 							data={data}
@@ -39,71 +39,43 @@ const LateClaimsCard = (props) => {
 						/>
 					</Col>
 				</Row>
-				<Row gutter={16} style={{ marginTop: 20 }}>
-					<Col span={2} style={{ backgroundColor: '#cccccc' }}></Col>
-					<Col span={6} style={{ margin: 'auto' }}>
-						<span style={{ fontWeight: 'bold' }}>10</span> Days Late
+				<Row gutter={16}>
+					<Col span={1} style={{ backgroundColor: '#cccccc' }}></Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						Less than 10 Days Late
 					</Col>
-					<Col span={16} style={{ textAlign: 'right' }}>
-						<Link
-							strong
-							href="https://ant.design"
-							target="_blank"
-							style={{ fontSize: 17 }}
-						>
-							10
-						</Link>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>10</Link>
 					</Col>
 				</Row>
-				<Divider style={{ marginTop: 5, marginBottom: 5 }} />
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={2} style={{ backgroundColor: '#999999' }}></Col>
-					<Col span={6} style={{ margin: 'auto' }}>
-						<span style={{ fontWeight: 'bold' }}>15</span> Days Late
+					<Col span={1} style={{ backgroundColor: '#999999' }}></Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						10 to 29 Days Late
 					</Col>
-					<Col span={16} style={{ textAlign: 'right' }}>
-						<Link
-							strong
-							href="https://ant.design"
-							target="_blank"
-							style={{ fontSize: 17 }}
-						>
-							2
-						</Link>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>2</Link>
 					</Col>
 				</Row>
-				<Divider style={{ marginTop: 5, marginBottom: 5 }} />
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={2} style={{ backgroundColor: '#666666' }}></Col>
-					<Col span={6} style={{ margin: 'auto' }}>
-						<span style={{ fontWeight: 'bold' }}>30</span> Days Late
+					<Col span={1} style={{ backgroundColor: '#666666' }}></Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						30 to 59 Days Late
 					</Col>
-					<Col span={16} style={{ textAlign: 'right' }}>
-						<Link
-							strong
-							href="https://ant.design"
-							target="_blank"
-							style={{ fontSize: 17 }}
-						>
-							5
-						</Link>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>5</Link>
 					</Col>
 				</Row>
-				<Divider style={{ marginTop: 5, marginBottom: 5 }} />
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={2} style={{ backgroundColor: '#fd0000' }}></Col>
-					<Col span={6} style={{ margin: 'auto' }}>
-						<span style={{ fontWeight: 'bold' }}>60</span> Days Late
+					<Col span={1} style={{ backgroundColor: '#fd0000' }}></Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						60 or More Days Late
 					</Col>
-					<Col span={16} style={{ textAlign: 'right' }}>
-						<Link
-							strong
-							href="https://ant.design"
-							target="_blank"
-							style={{ fontSize: 17 }}
-						>
-							3
-						</Link>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>3</Link>
 					</Col>
 				</Row>
 			</Card>

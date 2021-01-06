@@ -10,7 +10,10 @@ const { Title, Text } = Typography;
 const SettledCard = (props) => {
 	return (
 		<Fragment>
-			<Card title="Settled Percentage" style={{ borderRadius: 5 }}>
+			<Card
+				title="Provider Groups by Paid Claims - Settled Percentage"
+				style={{ borderRadius: 5 }}
+			>
 				<Row>
 					<Col span={24}>
 						<Title level={5}>Top 4 Providers</Title>

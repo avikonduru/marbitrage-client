@@ -14,7 +14,7 @@ const Dashboard = (props) => {
 	return (
 		<Fragment>
 			<Row gutter={16}>
-				<Col span={10}>
+				<Col span={9}>
 					<Row>
 						<Col span={24}>
 							<ClaimsCard />
@@ -26,7 +26,7 @@ const Dashboard = (props) => {
 						</Col>
 					</Row>
 				</Col>
-				<Col span={14}>
+				<Col span={15}>
 					<Row>
 						<Col span={24}>
 							<SettledCard />
