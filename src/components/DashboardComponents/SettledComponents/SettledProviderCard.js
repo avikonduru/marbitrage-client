@@ -14,9 +14,9 @@ const SettledProviderCard = ({ provider, averageTarget, averageSettled }) => {
 
 	return (
 		<Fragment>
-			<Card style={{ borderRadius: 5 }} hoverable={true}>
+			<Card size="small" style={{ borderRadius: 5 }} hoverable={true}>
 				<Row gutter={16}>
-					<Col span={8}>
+					<Col span={7}>
 						<Row>
 							<Col span={24}>
 								<Text style={{ fontSize: 12 }}>{provider}</Text>
@@ -28,7 +28,7 @@ const SettledProviderCard = ({ provider, averageTarget, averageSettled }) => {
 							</Col>
 						</Row>
 					</Col>
-					<Col span={4}>
+					<Col span={5}>
 						<Row>
 							<Col span={24}>
 								<Text style={{ fontSize: 12 }}>
@@ -39,7 +39,7 @@ const SettledProviderCard = ({ provider, averageTarget, averageSettled }) => {
 						<Row>
 							<Col span={24}>
 								<Text style={{ color: '#999999', fontSize: 8 }}>
-									Average Asked Amount
+									Average Claimed Amount
 								</Text>
 							</Col>
 						</Row>

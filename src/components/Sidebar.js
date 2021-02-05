@@ -29,10 +29,7 @@ const Sidebar = (props) => {
 					<Menu.Item key="2" icon={<CreditCardOutlined />}>
 						Payments
 					</Menu.Item>
-					<Menu.Item key="3" icon={<DatabaseOutlined />}>
-						Storage
-					</Menu.Item>
-					<Menu.Item key="4" icon={<CalendarOutlined />}>
+					<Menu.Item key="3" icon={<CalendarOutlined />}>
 						Calender
 					</Menu.Item>
 				</Menu>

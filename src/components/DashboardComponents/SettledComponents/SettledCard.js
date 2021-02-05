@@ -16,7 +16,9 @@ const SettledCard = (props) => {
 			>
 				<Row>
 					<Col span={24}>
-						<Title level={5}>Top 4 Providers</Title>
+						<Title level={5}>
+							Top 4 Providers by Average Settled Percentage
+						</Title>
 					</Col>
 				</Row>
 				<Row>

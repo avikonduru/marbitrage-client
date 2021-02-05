@@ -18,8 +18,9 @@ const TopNav = (props) => {
 				style={{
 					backgroundColor: 'white',
 					position: 'fixed',
-					zIndex: 1,
+					zIndex: 2,
 					width: '100%',
+					minHeight: '8vh',
 				}}
 			>
 				<div

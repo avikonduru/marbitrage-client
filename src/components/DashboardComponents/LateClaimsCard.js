@@ -5,13 +5,17 @@ import { Bar } from 'react-chartjs-2';
 
 const { Title, Link } = Typography;
 
+var randomColorGenerator = function () {
+	return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+};
+
 const data = {
-	labels: ['0 to 9 Days', '10 to 29 Days', '30 to 59 Days', '60+ Days'],
+	labels: ['0 to 4 Days', '5 to 10 Days', '11 to 20 Days', '21 to 30 Days'],
 	datasets: [
 		{
-			label: 'Number of Claims',
-			backgroundColor: ['#cccccc', '#999999', '#666666', '#fd0000'],
-			data: [10, 2, 5, 3],
+			label: '1',
+			data: [10, 2, 5, 7, 3],
+			backgroundColor: ['#CCCCCC', '#999999', '#666666', '#FF0000'],
 		},
 	],
 };
@@ -27,11 +31,17 @@ const LateClaimsCard = (props) => {
 							options={{
 								legend: { display: false },
 								scales: {
+									xAxes: [
+										{
+											stacked: true,
+										},
+									],
 									yAxes: [
 										{
 											ticks: {
 												beginAtZero: true,
 											},
+											stacked: true,
 										},
 									],
 								},
@@ -40,9 +50,25 @@ const LateClaimsCard = (props) => {
 					</Col>
 				</Row>
 				<Row gutter={16}>
-					<Col span={1} style={{ backgroundColor: '#cccccc' }}></Col>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#cccccc',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
 					<Col span={16} style={{ margin: 'auto' }}>
-						Less than 10 Days Late
+						Less than 5 Days Late
 					</Col>
 					<Col span={6} style={{ textAlign: 'right' }}>
 						<Link strong>10</Link>
@@ -50,9 +76,25 @@ const LateClaimsCard = (props) => {
 				</Row>
 				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={1} style={{ backgroundColor: '#999999' }}></Col>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#999999',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
 					<Col span={16} style={{ margin: 'auto' }}>
-						10 to 29 Days Late
+						5 to 10 Days Late
 					</Col>
 					<Col span={6} style={{ textAlign: 'right' }}>
 						<Link strong>2</Link>
@@ -60,9 +102,25 @@ const LateClaimsCard = (props) => {
 				</Row>
 				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={1} style={{ backgroundColor: '#666666' }}></Col>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#666666',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
 					<Col span={16} style={{ margin: 'auto' }}>
-						30 to 59 Days Late
+						11 to 20 Days Late
 					</Col>
 					<Col span={6} style={{ textAlign: 'right' }}>
 						<Link strong>5</Link>
@@ -70,9 +128,34 @@ const LateClaimsCard = (props) => {
 				</Row>
 				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
 				<Row gutter={16}>
-					<Col span={1} style={{ backgroundColor: '#fd0000' }}></Col>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#fd0000',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
 					<Col span={16} style={{ margin: 'auto' }}>
-						60 or More Days Late
+						21 or 30 Days Late
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>7</Link>
+					</Col>
+				</Row>
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
+				<Row gutter={16}>
+					<Col span={18} style={{ marginRight: 'auto' }}>
+						More than 30 Days Late
 					</Col>
 					<Col span={6} style={{ textAlign: 'right' }}>
 						<Link strong>3</Link>

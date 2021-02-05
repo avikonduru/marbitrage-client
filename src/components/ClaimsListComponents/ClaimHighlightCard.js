@@ -8,12 +8,12 @@ const { Title, Text } = Typography;
 
 const ClaimHighlightCard = ({
 	claimID,
-	targetPrice,
+	claimedPrice,
 	settledPrice,
 	settledPercentage,
 	status,
 	provider,
-	timeStamp,
+	dateCreated,
 }) => {
 	let history = useHistory();
 
@@ -24,6 +24,7 @@ const ClaimHighlightCard = ({
 	return (
 		<Fragment>
 			<Card
+				size="small"
 				title={`Claims ID: ${claimID}`}
 				style={{ width: '100%', borderRadius: 5 }}
 			>
@@ -31,13 +32,13 @@ const ClaimHighlightCard = ({
 					<Col span={3}>
 						<Row>
 							<Col span={24}>
-								<Text style={{ fontSize: 12 }}>${`${targetPrice}`}</Text>
+								<Text style={{ fontSize: 12 }}>${`${claimedPrice}`}</Text>
 							</Col>
 						</Row>
 						<Row>
 							<Col span={24}>
 								<Text style={{ color: '#999999', fontSize: 10 }}>
-									Target Price
+									Claimed Amount
 								</Text>
 							</Col>
 						</Row>
@@ -45,13 +46,15 @@ const ClaimHighlightCard = ({
 					<Col span={3}>
 						<Row>
 							<Col span={24}>
-								<Text style={{ fontSize: 12 }}>{settledPrice}</Text>
+								<Text style={{ fontSize: 12 }}>
+									{!settledPrice ? 'N/A' : settledPrice}
+								</Text>
 							</Col>
 						</Row>
 						<Row>
 							<Col span={24}>
 								<Text style={{ color: '#999999', fontSize: 10 }}>
-									Settled Price
+									Settled Amount
 								</Text>
 							</Col>
 						</Row>
@@ -59,7 +62,9 @@ const ClaimHighlightCard = ({
 					<Col span={3}>
 						<Row>
 							<Col span={24}>
-								<Text style={{ fontSize: 12 }}>{settledPercentage}</Text>
+								<Text style={{ fontSize: 12 }}>
+									{!settledPercentage ? 'N/A' : settledPercentage}
+								</Text>
 							</Col>
 						</Row>
 						<Row>
@@ -97,13 +102,13 @@ const ClaimHighlightCard = ({
 					<Col span={6}>
 						<Row>
 							<Col span={24}>
-								<Text style={{ fontSize: 12 }}>{timeStamp}</Text>
+								<Text style={{ fontSize: 12 }}>{dateCreated}</Text>
 							</Col>
 						</Row>
 						<Row>
 							<Col span={24}>
 								<Text style={{ color: '#999999', fontSize: 10 }}>
-									Time Stamp
+									Date Created
 								</Text>
 							</Col>
 						</Row>
@@ -128,12 +133,12 @@ const ClaimHighlightCard = ({
 
 ClaimHighlightCard.propTypes = {
 	claimID: PropTypes.string,
-	targetPrice: PropTypes.number,
+	claimedPrice: PropTypes.number,
 	settledPrice: PropTypes.number,
 	settledPercentage: PropTypes.number,
 	status: PropTypes.string,
 	provider: PropTypes.string,
-	timeStamp: PropTypes.string,
+	dateCreated: PropTypes.string,
 };
 
 export default ClaimHighlightCard;

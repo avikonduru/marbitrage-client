@@ -12,7 +12,7 @@ const { Title, Text, Link } = Typography;
 
 const Dashboard = (props) => {
 	return (
-		<Fragment>
+		<div style={{ padding: '20px 30px' }}>
 			<Row gutter={16}>
 				<Col span={9}>
 					<Row>
@@ -39,7 +39,7 @@ const Dashboard = (props) => {
 					</Row>
 				</Col>
 			</Row>
-		</Fragment>
+		</div>
 	);
 };
 

@@ -8,7 +8,7 @@ const { Title, Text, Link } = Typography;
 const ProviderCard = (props) => {
 	return (
 		<Fragment>
-			<Card style={{ borderRadius: 5 }} hoverable={true}>
+			<Card size="small" style={{ borderRadius: 5 }} hoverable={true}>
 				<Row gutter={16}>
 					<Col span={10}>
 						<Row>
@@ -35,7 +35,7 @@ const ProviderCard = (props) => {
 						<Row>
 							<Col span={24}>
 								<Text style={{ color: '#999999', fontSize: 10 }}>
-									Total Asked Amount
+									Total Claimed Amount
 								</Text>
 							</Col>
 						</Row>

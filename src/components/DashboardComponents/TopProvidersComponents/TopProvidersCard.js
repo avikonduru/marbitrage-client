@@ -13,7 +13,7 @@ const TopProvidersCard = (props) => {
 			<Card title="Unpaid Claims by Provider Group" style={{ borderRadius: 5 }}>
 				<Row>
 					<Col span={24}>
-						<Title level={5}>Top 4 Providers</Title>
+						<Title level={5}>Top 4 Providers by Unpaid Claims</Title>
 					</Col>
 				</Row>
 				<Row gutter={16}>

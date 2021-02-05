@@ -8,33 +8,39 @@ import Sidebar from './components/Sidebar';
 
 //Pages
 import Dashboard from './pages/Dashboard';
-import ClaimsListPage from './pages/ClaimsListPage';
+import ClaimsPage from './pages/ClaimsPage';
 import ClaimPage from './pages/ClaimPage';
+import LogIn from './pages/LogIn';
+import PaymentOptionPage from './pages/PaymentPages/PaymentOptionPage';
 
 const { Content } = Layout;
 
 function App() {
 	return (
 		<Router>
-			<Layout>
-				<TopNav />
-				<Layout style={{ marginTop: 64 }}>
-					<Sidebar />
-					<Content
-						style={{
-							marginLeft: 200,
-							overflow: 'initial',
-							padding: '20px 30px',
-						}}
-					>
-						<Switch>
-							<Route exact path="/" component={Dashboard} />
-							<Route exact path="/claims" component={ClaimsListPage} />
-							<Route exact path="/claim" component={ClaimPage} />
-						</Switch>
-					</Content>
+			<Switch>
+				<Route exact path="/login" component={LogIn} />
+				<Layout style={{ backgroundColor: 'black' }}>
+					<TopNav />
+					<Layout style={{ marginTop: 64 }}>
+						<Sidebar />
+						<Content
+							style={{
+								marginLeft: 200,
+								overflow: 'initial',
+								minHeight: '92vh',
+							}}
+						>
+							<Switch>
+								<Route exact path="/" component={Dashboard} />
+								<Route exact path="/claims" component={ClaimsPage} />
+								<Route exact path="/claim" component={ClaimPage} />
+								<Route exact path="/payments" component={PaymentOptionPage} />
+							</Switch>
+						</Content>
+					</Layout>
 				</Layout>
-			</Layout>
+			</Switch>
 		</Router>
 	);
 }

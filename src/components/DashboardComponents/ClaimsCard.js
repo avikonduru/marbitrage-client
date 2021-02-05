@@ -16,15 +16,8 @@ const data = {
 	],
 	datasets: [
 		{
-			data: [45, 10, 5, 4, 7],
-			backgroundColor: ['#FF0000', '#CCCCCC', '#999999', '#666666', '#333333'],
-			hoverBackgroundColor: [
-				'#FF0000',
-				'#CCCCCC',
-				'#999999',
-				'#666666',
-				'#333333',
-			],
+			data: [5, 10, 45],
+			backgroundColor: ['#525FE5', '#666666', '#CCCCCC'],
 			borderColor: '#ffffff',
 		},
 	],
@@ -58,55 +51,99 @@ const ClaimsCard = (props) => {
 						<Doughnut data={data} options={options} />
 					</Col>
 				</Row>
-				<Row>
-					<Col span={24}>
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#FF0000' }}></Col>
-							<Col span={16}>Unpaid</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>45</Link>
-							</Col>
-						</Row>
-						<Divider style={{ marginTop: 10, marginBottom: 10 }} />
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#CCCCCC' }}></Col>
-							<Col span={16}>In Progress</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>10</Link>
-							</Col>
-						</Row>
-						<Divider style={{ marginTop: 10, marginBottom: 10 }} />
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#999999' }}></Col>
-							<Col span={16}>Arbitration Review</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>5</Link>
-							</Col>
-						</Row>
-						<Divider style={{ marginTop: 10, marginBottom: 10 }} />
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#666666' }}></Col>
-							<Col span={16}>Arbitration Approved</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>4</Link>
-							</Col>
-						</Row>
-						<Divider style={{ marginTop: 10, marginBottom: 10 }} />
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#333333' }}></Col>
-							<Col span={16}>Ready for Payment</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>7</Link>
-							</Col>
-						</Row>
-						<Divider style={{ marginTop: 10, marginBottom: 10 }} />
-						<Row gutter={16}>
-							<Col span={1} style={{ backgroundColor: '#525FE5' }}></Col>
-							<Col span={16}>Paid</Col>
-							<Col span={6} style={{ textAlign: 'right' }}>
-								<Link strong>1035</Link>
-							</Col>
-						</Row>
+				<Row gutter={16}>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#cccccc',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						Unpaid
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>45</Link>
+					</Col>
+				</Row>
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
+				<Row gutter={16}>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#666666',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						In Progess
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>10</Link>
+					</Col>
+				</Row>
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
+				<Row gutter={16}>
+					<Col
+						span={2}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								backgroundColor: '#525FE5',
+								width: '17px',
+								height: '17px',
+								margin: 'auto',
+							}}
+						></div>
+					</Col>
+					<Col span={16} style={{ margin: 'auto' }}>
+						Ready for Payment
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>5</Link>
+					</Col>
+				</Row>
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
+				<Row gutter={16}>
+					<Col span={18} style={{ marginRight: 'auto', textAlign: 'left' }}>
+						Paid
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>1035</Link>
+					</Col>
+				</Row>
+				<Divider style={{ marginTop: 10, marginBottom: 10 }} />
+				<Row gutter={16}>
+					<Col span={18} style={{ marginRight: 'auto', textAlign: 'left' }}>
+						Unable to Process
+					</Col>
+					<Col span={6} style={{ textAlign: 'right' }}>
+						<Link strong>4</Link>
 					</Col>
 				</Row>
 			</Card>
