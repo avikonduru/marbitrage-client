@@ -91,7 +91,42 @@ const ClaimPage = (props) => {
 				<Col span={16}>
 					<Row>
 						<Col span={24}>
-							<Card style={{ minHeight: '590px' }}></Card>
+							<div
+								style={{
+									minHeight: '590px',
+									backgroundColor: 'white',
+								}}
+							>
+								<Row>
+									<Col span={24}>
+										<Card size="small">
+											<Row>
+												<Col span={18}>
+													<h5>
+														Blue Cross Blue Sheild of Texas: Kumaravinash
+														Konduru
+													</h5>
+												</Col>
+												<Col
+													span={6}
+													style={{
+														fontSize: 10,
+														color: '#999999',
+														textAlign: 'right',
+													}}
+												>
+													January 7th 2021, 01:34:52 am
+												</Col>
+											</Row>
+											<Row>
+												<Col span={24} style={{ color: '#666666' }}>
+													<p>Let's do this!</p>
+												</Col>
+											</Row>
+										</Card>
+									</Col>
+								</Row>
+							</div>
 						</Col>
 					</Row>
 					<Row>

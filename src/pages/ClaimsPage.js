@@ -308,11 +308,11 @@ const ClaimsPage = (props) => {
 			key: 'action',
 			render: (text, record) => (
 				<Button
-					type="link"
+					type="primary"
+					shape="circle"
 					icon={<RightOutlined />}
 					size={'large'}
 					onClick={console.log('clicked')}
-					style={{ textAlign: 'right' }}
 				/>
 			),
 		},
